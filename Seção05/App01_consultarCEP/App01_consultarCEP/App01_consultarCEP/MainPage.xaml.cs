@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using App01_consultarCEP.Servico.Modelo;
 using App01_consultarCEP.Servico;
+
 namespace App01_consultarCEP
 {
 	public partial class MainPage : ContentPage
@@ -18,9 +19,7 @@ namespace App01_consultarCEP
 		}
 
         private void BuscarCEP(object sender, EventArgs args) {
-            //TUDO - Lógica do Programa.
 
-            //TUDO - Validações.
             string cep = CEP.Text.Trim();
 
             if (isValidCEP(cep))
