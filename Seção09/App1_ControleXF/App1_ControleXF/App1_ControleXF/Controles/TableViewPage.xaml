@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1_ControleXF.Controles.TableViewPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <TableView Intent="Settings">
+                <TableRoot>
+                    <TableSection Title="Backup">
+                        <SwitchCell Text="Backup das Imagens" On="False" />
+                        <SwitchCell Text="Backup dos Textos" On="False" />
+                        <SwitchCell Text="Backup da Chat" On="False" />
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" >
+                                <Label Text="Backup Frenquência(Semanal)" />
+                                <Slider HorizontalOptions="FillAndExpand" Minimum="0" Maximum="7" />
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                    
+                    <TableSection Title="Criptografia">
+                        <SwitchCell Text="Senhas Criptografadas" On="True" />
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

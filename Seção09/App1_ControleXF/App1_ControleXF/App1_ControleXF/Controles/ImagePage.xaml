@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1_ControleXF.Controles.ImagePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="Container">
+            <Image 
+                Source="https://vignette.wikia.nocookie.net/fantendo/images/b/b6/Cuphead_logo_game.png/revision/latest?cb=20180221015651"
+                Aspect="AspectFit"  
+                IsOpaque="True"
+                x:Name="ImageOne"
+
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App02_Xamarin.Pages.Perfil1">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <RelativeLayout VerticalOptions="Start" HeightRequest="300" BackgroundColor="White">
+                <Image Source="Fundo.png" 
+                       RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+                       />
+                <Image Source="Perfil.png"
+                       x:Name="Perfil"
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-60}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"
+                       WidthRequest="120"
+                       />
+                <Label Text="Vol'Jin" 
+                       RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=X, Factor=1}"
+                       RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=Y, Factor=1, Constant=180}"
+                       />
+            </RelativeLayout>
+            <Grid HeightRequest="120" BackgroundColor="#0D1F2D">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <StackLayout Spacing="0" Grid.Column="0" Grid.Row="0"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Warchief of the Horde" TextColor="White" FontSize="32" HorizontalTextAlignment="Center"/>
+                    <Label Text="Title" TextColor="White" FontSize="18" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+                <StackLayout Spacing="0" Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Troll" TextColor="White" FontSize="32"/>
+                    <Label Text="Race" TextColor="White" FontSize="18" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Grid>
+            <StackLayout Padding="30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+                <Label Text="The Shadow Hunter Vol'jin, son of Sen'jin, chieftain of the Darkspear tribe, and rightful ruler of the Echo Isles, was a staunch ally of former Warchief Thrall. After the Echo Isles were conquered by the traitorous sorcerer Zalazane, he resided in Orgrimmar at the side of the Warchief, later fighting alongside him during the Battle for the Undercity." />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
