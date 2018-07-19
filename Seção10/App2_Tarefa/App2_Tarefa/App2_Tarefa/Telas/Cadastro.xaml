@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2_Tarefa.Telas.Cadastro">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Nome" FontAttributes="Bold"/>
+            <Entry x:Name="TxtNome" />
+            <Label Text="Prioridade" FontAttributes="Bold"/>
+            <StackLayout x:Name="SLPrioridades">
+                <StackLayout Orientation="Horizontal" Spacing="10">
+
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="vermelho.png" />
+                                <On Platform="UWP" Value="Resources/vermelho.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    
+                    <Label Text="Urgente e importante" TextColor="Gray" HorizontalOptions="FillAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="laranja.png" />
+                                <On Platform="UWP" Value="Resources/laranja.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+
+                    <Label Text="Urgente e não importante" TextColor="Gray" HorizontalOptions="FillAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="amarelo.png" />
+                                <On Platform="UWP" Value="Resources/amarelo.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+
+                    <Label Text="Não urgente e importante" TextColor="Gray" HorizontalOptions="FillAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Spacing="10">
+                    
+                    <Image>
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="verde.png" />
+                                <On Platform="UWP" Value="Resources/verde.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+
+                    <Label Text="Não urgente e não importante" TextColor="Gray" HorizontalOptions="FillAndExpand" />
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PrioridadeSelect" />
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
+            <Button Text="OK" TextColor="White" BackgroundColor="Blue" HorizontalOptions="End" Clicked="SalvarAction"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

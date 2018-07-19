@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2_Tarefa.Telas.Inicio">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="Blue" HeightRequest="250">
+                <Label Text="Meu Dia" FontSize="24" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <Label Text="" x:Name="DataHoje" TextColor="White" HorizontalOptions="Start" VerticalOptions="End"/>
+            </StackLayout>
+            <StackLayout x:Name="SLTarefas" Padding="10" Spacing="10">
+                
+            
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="CheckOff.png" />
+                                <On Platform="UWP" Value="Resources/CheckOff.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+   
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Spacing="0">
+                        <Label Text="Task 1"/>
+                    </StackLayout>
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="vermelho.png" />
+                                <On Platform="UWP" Value="Resources/vermelho.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="Delete.png" />
+                                <On Platform="UWP" Value="Resources/Delete.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+
+            </StackLayout>
+            
+            
+            <StackLayout Orientation="Horizontal" Spacing="15">
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="CheckOn.png" />
+                                <On Platform="UWP" Value="Resources/CheckOn.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center" Spacing="0">
+                        <Label Text="Task 2" TextColor="LightGray"/>
+                        <Label Text="Finalizado em 20/01 - 17:00h" TextColor="LightGray" FontSize="10"/>
+                    </StackLayout>
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="laranja.png" />
+                                <On Platform="UWP" Value="Resources/laranja.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+                    <Image VerticalOptions="Center">
+                        <Image.Source>
+                            <OnPlatform x:TypeArguments="ImageSource">
+                                <On Platform="Android, iOS" Value="Delete.png" />
+                                <On Platform="UWP" Value="Resources/Delete.png" />
+                            </OnPlatform>
+                        </Image.Source>
+                    </Image>
+
+            </StackLayout>
+            </StackLayout>
+            <Button HorizontalOptions="Center" BackgroundColor="Transparent" Clicked="ActionGoCadastro">
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="Android, iOS" Value="AddBotao.png" />
+                        <On Platform="UWP" Value="Resources/AddBotao.png" />
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
