@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using App2_ListaBrasil.Modelo;
+using App3_Brasil.Modelo;
 
-namespace App2_ListaBrasil
+namespace App3_Brasil
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class Municipios : ContentPage
